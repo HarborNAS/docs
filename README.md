@@ -3,6 +3,8 @@
 Read the user guides at **https://docs.harboros.ai/docs/**.
 
 - [Getting started](https://docs.harboros.ai/docs/getting-started/)
+- [Downloads and support](https://docs.harboros.ai/docs/downloads-support/)
+- [Application guides](https://docs.harboros.ai/docs/application-guides/)
 - [Configuration help](https://docs.harboros.ai/docs/configuration-help/)
 - [Reporting bugs](https://docs.harboros.ai/docs/reporting-bugs/)
 
@@ -10,10 +12,12 @@ If the website is unavailable, read the same guides directly in this repository:
 
 - [Documentation overview](content/docs/index.mdx)
 - [Getting started](content/docs/getting-started.mdx)
+- [Downloads and support](content/docs/downloads-support.mdx)
+- [Application guides](content/docs/application-guides.mdx)
 - [Configuration help](content/docs/configuration-help.mdx)
 - [Reporting bugs](content/docs/reporting-bugs.mdx)
 
-These initial guides cover access and support; detailed storage, networking, and application documentation is being expanded.
+The guides link to the existing [official Download Center](https://harboros.ai/pages/download-center), including the hardware manual, system image, firmware, and utilities, and to the [official application tutorials](https://harboros.ai/blogs/guidance). Detailed storage and networking documentation is being expanded.
 
 ## Questions and feedback
 
