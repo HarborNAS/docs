@@ -1,6 +1,6 @@
 import { RootProvider } from 'fumadocs-ui/provider/next';
 import './global.css';
-import { Inter } from 'next/font/google';
+import { Figtree, Jost } from 'next/font/google';
 import SearchDialog from '@/components/search';
 import type { Metadata } from 'next';
 
@@ -13,17 +13,26 @@ export const metadata: Metadata = {
   description: 'HarborOS getting started, configuration help, and community support.',
 };
 
-const inter = Inter({
+const figtree = Figtree({
   subsets: ['latin'],
+  variable: '--font-figtree',
+});
+
+const jost = Jost({
+  subsets: ['latin'],
+  variable: '--font-jost',
 });
 
 export default function Layout({ children }: LayoutProps<'/'>) {
   return (
-    <html lang="en" className={inter.className} suppressHydrationWarning>
+    <html lang="en" className={`${figtree.variable} ${jost.variable}`} suppressHydrationWarning>
       <body className="flex flex-col min-h-screen">
-        <RootProvider search={{
-    SearchDialog,
-  }}>{children}</RootProvider>
+        <RootProvider
+          theme={{ defaultTheme: 'light', enableSystem: false }}
+          search={{ SearchDialog }}
+        >
+          {children}
+        </RootProvider>
       </body>
     </html>
   );
