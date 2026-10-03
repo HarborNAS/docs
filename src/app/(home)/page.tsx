@@ -48,7 +48,7 @@ export default function HomePage() {
         <div className="harbor-container harbor-footer-content">
           <p>Harbor Innovations <span>HarborOS documentation &amp; support</span></p>
           <nav aria-label="Official Harbor links">
-            <a href="https://harboros.ai/">Official Website</a>
+            <a href="https://www.harboros.ai/">Official Website</a>
             <a href="https://harboros.ai/pages/contact-us">Contact Support</a>
             <a href="https://github.com/HarborNAS/community">Community</a>
           </nav>

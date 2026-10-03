@@ -26,6 +26,11 @@ export function baseOptions(): BaseLayoutProps {
         url: 'https://github.com/HarborNAS/community',
         external: true,
       },
+      {
+        text: 'Website',
+        url: 'https://www.harboros.ai/',
+        external: true,
+      },
     ],
   };
 }
