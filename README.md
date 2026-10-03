@@ -1,45 +1,48 @@
-# docs
+# HarborOS Documentation
 
-This is a Next.js application generated with
-[Create Fumadocs](https://github.com/fuma-nama/fumadocs).
+Read the user guides at **https://docs.harboros.ai/docs/**.
 
-Run development server:
+- [Getting started](https://docs.harboros.ai/docs/getting-started/)
+- [Configuration help](https://docs.harboros.ai/docs/configuration-help/)
+- [Reporting bugs](https://docs.harboros.ai/docs/reporting-bugs/)
 
-```bash
-npm run dev
-# or
+If the website is unavailable, read the same guides directly in this repository:
+
+- [Documentation overview](content/docs/index.mdx)
+- [Getting started](content/docs/getting-started.mdx)
+- [Configuration help](content/docs/configuration-help.mdx)
+- [Reporting bugs](content/docs/reporting-bugs.mdx)
+
+These initial guides cover access and support; detailed storage, networking, and application documentation is being expanded.
+
+## Questions and feedback
+
+Ask configuration questions in [Community Q&A](https://github.com/HarborNAS/community/discussions/categories/q-a) or [open a question](https://github.com/HarborNAS/community/issues/new?template=question.yml). [Report HarborOS bugs](https://github.com/HarborNAS/community/issues/new?template=bug_report.yml) in the community repository. English and Chinese are welcome.
+
+For documentation corrections, open an issue or pull request in this repository.
+
+## Contributing and local development
+
+This website uses Next.js and Fumadocs. Documentation lives in `content/docs`; navigation order is defined in `content/docs/meta.json`.
+
+Use Node.js 22 and pnpm 10, matching the deployment workflow:
+
+```sh
+pnpm install --frozen-lockfile
 pnpm dev
-# or
-yarn dev
 ```
 
-Open http://localhost:3000 with your browser to see the result.
+Open http://localhost:3000/docs. Before submitting changes, run:
 
-## Explore
+```sh
+pnpm exec tsc --noEmit
+pnpm build
+```
 
-In the project, you can see:
+## Deployment
 
-- `lib/source.ts`: Code for content source adapter, [`loader()`](https://fumadocs.dev/docs/headless/source-api) provides the interface to access your content.
-- `lib/layout.shared.tsx`: Shared options for layouts, optional but preferred to keep.
+Pushes to `main` build a static export and deploy `out` to GitHub Pages through `.github/workflows/deploy.yml`. The configured custom domain is `docs.harboros.ai`. Both `/` and `/docs/` are public entry points; search is exported as static data and does not require a running application server.
 
-| Route                     | Description                                            |
-| ------------------------- | ------------------------------------------------------ |
-| `app/(home)`              | The route group for your landing page and other pages. |
-| `app/docs`                | The documentation layout and pages.                    |
-| `app/api/search/route.ts` | The Route Handler for search.                          |
+## 中文说明
 
-### Fumadocs MDX
-
-A `source.config.ts` config file has been included, you can customise different options like frontmatter schema.
-
-Read the [Introduction](https://fumadocs.dev/docs/mdx) for further details.
-
-## Learn More
-
-To learn more about Next.js and Fumadocs, take a look at the following
-resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js
-  features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-- [Fumadocs](https://fumadocs.dev) - learn about Fumadocs
+用户文档入口：https://docs.harboros.ai/docs/ 。网站暂时不可用时，可以直接阅读上面的仓库文档链接。配置求助及系统 Bug 请提交到 [HarborNAS/community](https://github.com/HarborNAS/community)；文档纠错可在本仓库提交 Issue 或 PR。
